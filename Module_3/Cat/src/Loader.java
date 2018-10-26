@@ -10,8 +10,8 @@ public class Loader
         Cat asya = new Cat();
         Cat begemot = new Cat();
 
-        nuasha.getWeight();
-        for (int i = 0; i < 3500; i++)
+
+        for (int i = 0; i < 3400; i++)
         {
             nuasha.feed(2.0);
             tisha.meow();
@@ -37,7 +37,6 @@ public class Loader
     public static Cat getKitten()
     {
         Double catWeight = 100. + 100. * Math.random();
-        Cat cat = new Cat(catWeight);
-        return cat;
+        return new Cat(catWeight);
     }
 }
