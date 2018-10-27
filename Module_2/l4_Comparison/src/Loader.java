@@ -58,7 +58,7 @@ public class Loader
 
         System.out.println("Most old: " + oldest);
         System.out.println("Most young: " + youngest);
-        System.out.println("Middle: " + middle);
+        if (oldest != middle && youngest != middle) System.out.println("Middle: " + middle);
 
     }
 
