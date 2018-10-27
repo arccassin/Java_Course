@@ -6,7 +6,7 @@ public class Loader
     public static void main(String[] args)
     {
         Integer dimaAge = 35;//x
-        Integer mishaAge = 55;//y
+        Integer mishaAge = 18;//y
         Integer vasyaAge = 18;//z
 
         Integer oldest;
