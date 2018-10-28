@@ -10,12 +10,12 @@ public class Loader
         Cat asya = new Cat();
         Cat begemot = new Cat();
 
-
         for (int i = 0; i < 3400; i++)
         {
             nuasha.feed(2.0);
             tisha.meow();
             sima.drink(1.0);
+            asya.goToilet();
         }
 
         yarsik.feed(350.0);
@@ -32,6 +32,11 @@ public class Loader
 
         Cat kitCat = getKitten();
         System.out.println("kitCat weight: " + kitCat.getWeight());
+        System.out.println("nuasha eaten mass: " + nuasha.getEatenMass());
+
+        begemot.createTwin(sima);
+        System.out.println(sima.getStatus());
+        System.out.println(begemot.getStatus());
     }
 
     public static Cat getKitten()

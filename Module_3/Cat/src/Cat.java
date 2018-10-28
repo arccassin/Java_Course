@@ -3,13 +3,13 @@ public class Cat
 {
     private Double originWeight;
     private Double weight;
-
     private Double feedWeigth = 0.0;
+
     private Double minWeight;
     private Double maxWeight;
 
-    private boolean liveStatus = true;
 
+    private boolean liveStatus = true;
     private static Integer count = 0;
 
     public static Integer getCount()
@@ -99,5 +99,29 @@ public class Cat
     {
         weight = weight - 10;
         System.out.println("Terrorist win!");
+    }
+
+    public Double getOriginWeight()
+    {
+        return originWeight;
+    }
+
+    public Double getFeedWeigth()
+    {
+        return feedWeigth;
+    }
+
+    public boolean getLiveStatus()
+    {
+        return liveStatus;
+    }
+
+    public void createTwin(Cat cat)
+    {
+        originWeight = cat.getOriginWeight();
+        feedWeigth = cat.getFeedWeigth();
+        weight = cat.getWeight();
+        liveStatus = cat.getLiveStatus();
+
     }
 }
