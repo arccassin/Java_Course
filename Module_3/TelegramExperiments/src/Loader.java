@@ -29,5 +29,6 @@ public class Loader
         System.out.println("Please, type confirmation code");
         AuthAuthorization authAuthorization = bridge.authSignIn(reader.readLine().trim());
         System.out.println("FirstName: " + authAuthorization.getUser().getFirstName());
+        bridge.authLogOut();
     }
 }
