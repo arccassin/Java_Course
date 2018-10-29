@@ -10,13 +10,23 @@ public class Loader
         Cat asya = new Cat();
         Cat begemot = new Cat();
 
-        for (int i = 0; i < 3400; i++)
+        while (nuasha.getStatus() != "Exploded")
         {
             nuasha.feed(2.0);
-            tisha.meow();
-            sima.drink(1.0);
-            asya.goToilet();
         }
+
+        while (tisha.getStatus() != "Dead")
+        {
+            tisha.meow();
+        }
+
+        while (nuasha.getStatus() != "Exploded")
+        {
+            nuasha.feed(2.0);
+        }
+
+        sima.drink(1.0);
+        asya.goToilet();
 
         yarsik.feed(350.0);
         asya.drink(100.0);

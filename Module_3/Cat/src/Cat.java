@@ -19,11 +19,7 @@ public class Cat
 
     public Cat()
     {
-        weight = 1500.0 + 3000.0 * Math.random();
-        originWeight = weight;
-        minWeight = 1000.0;
-        maxWeight = 9000.0;
-        Cat.count = Cat.count + 1;
+        this(1500.0 + 3000.0 * Math.random());
     }
 
     public Cat(Double catWeight)
@@ -33,7 +29,6 @@ public class Cat
         minWeight = 1000.0;
         maxWeight = 9000.0;
         count = Cat.count + 1;
-
     }
 
     public void meow()
@@ -97,8 +92,8 @@ public class Cat
 
     public void goToilet()
     {
-        weight = weight - 10;
-        System.out.println("Terrorist win!");
+        weight = weight - 100;
+        System.out.println("Bomb has been planted!");
     }
 
     public Double getOriginWeight()

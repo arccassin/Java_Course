@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3566954-15db-468d-82d7-9b60a8957e26" name="Default" comment="delete">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Cat/Cat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cat/Cat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Cat/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cat/Loader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module_1/WidowApp/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module_1/WidowApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module_1/WidowApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module_1/WidowApp/out/production/WidowApp/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module_1/WidowApp/out/production/WidowApp/Loader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TelegramExperiments/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TelegramExperiments/src/Loader.java" afterDir="false" />
     </list>
     <ignored path="Cat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,36 +61,38 @@
     <session id="195519954">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="274" />
+          <entry key="java" value="358" />
           <entry key="txt" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="274" />
+          <entry key="JAVA" value="358" />
           <entry key="PLAIN_TEXT" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="3" />
+          <entry key="java" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Git file" value="3" />
+          <entry key="JAVA" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -97,20 +102,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Loader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="170">
+              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -118,15 +114,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="120" column="45" selection-start-line="120" selection-start-column="45" selection-end-line="120" selection-end-column="45" />
+            <state relative-caret-position="189">
+              <caret line="114" column="5" lean-forward="true" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
               <folding>
+                <element signature="e#351#352#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
                 <element signature="e#2071#2072#0" expanded="true" />
-                <element signature="e#2105#2106#0" expanded="true" />
-                <element signature="e#2151#2152#0" expanded="true" />
-                <element signature="e#2183#2184#0" expanded="true" />
-                <element signature="e#2230#2231#0" expanded="true" />
-                <element signature="e#2263#2264#0" expanded="true" />
+                <element signature="e#2106#2107#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,8 +142,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/Cat.java" />
         <option value="$PROJECT_DIR$/src/Loader.java" />
+        <option value="$PROJECT_DIR$/src/Cat.java" />
       </list>
     </option>
   </component>
@@ -248,6 +242,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,9 +260,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,7 +269,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540645359962" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Module_2/l4_Comparison" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -430,6 +424,7 @@
       <workItem from="1540588993866" duration="1201000" />
       <workItem from="1540644221666" duration="1280000" />
       <workItem from="1540745877407" duration="1871000" />
+      <workItem from="1540838836488" duration="1455000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1540583846246</created>
@@ -489,7 +484,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11759000" />
+    <option name="totallyTimeSpent" value="13214000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -503,7 +498,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1232" height="815" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23122866" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23549488" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Palette&#9;" order="3" />
@@ -588,18 +583,6 @@
     <MESSAGE value="delete" />
     <option name="LAST_COMMIT_MESSAGE" value="delete" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Loader.java</url>
-          <line>38</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
@@ -620,32 +603,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="120" column="45" selection-start-line="120" selection-start-column="45" selection-end-line="120" selection-end-column="45" />
+        <state relative-caret-position="189">
+          <caret line="114" column="5" lean-forward="true" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
           <folding>
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
             <element signature="e#2071#2072#0" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-            <element signature="e#2151#2152#0" expanded="true" />
-            <element signature="e#2183#2184#0" expanded="true" />
-            <element signature="e#2230#2231#0" expanded="true" />
-            <element signature="e#2263#2264#0" expanded="true" />
+            <element signature="e#2106#2107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../WindowApp/src/Loader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Loader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="170">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
         </state>
       </provider>
     </entry>
