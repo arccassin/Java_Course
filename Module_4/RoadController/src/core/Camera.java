@@ -11,9 +11,9 @@ public class Camera
         //String randomNumber
         String randomNumber = Double.toString(Math.random()).substring(2, 5);
         //Integer randomHeight
-        Integer randomHeight = (int) (1000 + 3500. * Math.random());
+        int randomHeight = (int) (1000 + 3500. * Math.random());
         //Double randomWeight
-        Double randomWeight = 600 + 10000 * Math.random();
+        double randomWeight = 600 + 10000 * Math.random();
         //Car car
         Car car = new Car(randomNumber, randomHeight, randomWeight, Math.random() > 0.5);
         if(Math.random() < 0.15) {

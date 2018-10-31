@@ -3,23 +3,23 @@ import core.Camera;
 
 public class RoadController
 {
-    public static Double passengerCarMaxWeight = 3500.0; // kg
-    public static Integer passengerCarMaxHeight = 2000; // mm
-    public static Integer controllerMaxHeight = 3500; // mm
+    public static double passengerCarMaxWeight = 3500.0; // kg
+    public static int passengerCarMaxHeight = 2000; // mm
+    public static int controllerMaxHeight = 3500; // mm
 
-    public static Integer passengerCarPrice = 100; // RUB
-    public static Integer cargoCarPrice = 250; // RUB
-    public static Integer vehicleAdditionalPrice = 200; // RUB
+    public static int passengerCarPrice = 100; // RUB
+    public static int cargoCarPrice = 250; // RUB
+    public static int vehicleAdditionalPrice = 200; // RUB
 
-    public static Integer maxOncomingSpeed = 60; // km/h
-    public static Integer speedFineGrade = 20; // km/h
-    public static Integer finePerGrade = 500; // RUB
-    public static Integer criminalSpeed = 160; // km/h
+    public static int maxOncomingSpeed = 60; // km/h
+    public static int speedFineGrade = 20; // km/h
+    public static int finePerGrade = 500; // RUB
+    public static int criminalSpeed = 160; // km/h
 
     public static void main(String[] args)
     {
         //Integer i
-        for(Integer i = 0; i < 10; i++)
+        for(int i = 0; i < 10; i++)
         {
             //Car car
             Car car = Camera.getNextCar();
@@ -31,7 +31,7 @@ public class RoadController
              */
 
             //Boolean policeCalled
-            Boolean policeCalled = false;
+            boolean policeCalled = false;
             //String criminalNumber
             for(String criminalNumber : Police.getCriminalNumbers())
             {
@@ -59,9 +59,9 @@ public class RoadController
              * Проверяем высоту и массу автомобиля, вычисляем стоимость проезда
              */
             //Integer carHeight
-            Integer carHeight = car.getHeight();
+            int carHeight = car.getHeight();
             //Integer price
-            Integer price = 0;
+            int price = 0;
             if(carHeight > controllerMaxHeight)
             {
                 blockWay("высота вашего ТС превышает высоту пропускного пункта!");
@@ -70,7 +70,7 @@ public class RoadController
             else if(carHeight > passengerCarMaxHeight)
             {
                 //Double weight
-                Double weight = WeightMeter.getWeight(car);
+                double weight = WeightMeter.getWeight(car);
                 //Грузовой автомобиль
                 if(weight > passengerCarMaxWeight)
                 {
@@ -92,7 +92,7 @@ public class RoadController
              * Проверка скорости подъезда и выставление штрафа
              */
             //Integer carSpeed
-            Integer carSpeed = Camera.getCarSpeed(car);
+            int carSpeed = Camera.getCarSpeed(car);
             if(carSpeed > criminalSpeed)
             {
                 Police.call("cкорость автомобиля - " + carSpeed + " км/ч, номер - " + car.getNumber());
@@ -102,9 +102,9 @@ public class RoadController
             else if(carSpeed > maxOncomingSpeed)
             {
                 //Integer overSpeed
-                Integer overSpeed = carSpeed - maxOncomingSpeed;
+                int overSpeed = carSpeed - maxOncomingSpeed;
                 // Integer totalFine
-                Integer totalFine = finePerGrade * (1 + overSpeed / speedFineGrade);
+                int totalFine = finePerGrade * (1 + overSpeed / speedFineGrade);
                 System.out.println("Вы превысили скорость! Штраф: " + totalFine + " руб.");
                 price = price + totalFine;
             }
