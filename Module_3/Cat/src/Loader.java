@@ -44,7 +44,7 @@ public class Loader
         System.out.println("kitCat weight: " + kitCat.getWeight());
         System.out.println("nuasha eaten mass: " + nuasha.getEatenMass());
 
-        begemot.createTwin(sima);
+        sima = begemot.createTwin();
         System.out.println(sima.getStatus());
         System.out.println(begemot.getStatus());
     }

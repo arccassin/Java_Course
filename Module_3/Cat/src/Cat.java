@@ -111,12 +111,13 @@ public class Cat
         return liveStatus;
     }
 
-    public void createTwin(Cat cat)
+    public Cat createTwin()
     {
-        originWeight = cat.getOriginWeight();
-        feedWeigth = cat.getFeedWeigth();
-        weight = cat.getWeight();
-        liveStatus = cat.getLiveStatus();
-
+        Cat cat = new Cat();
+        cat.originWeight = getOriginWeight();
+        cat.feedWeigth = getFeedWeigth();
+        cat.weight = getWeight();
+        cat.liveStatus = getLiveStatus();
+        return cat;
     }
 }
