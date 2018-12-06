@@ -5,23 +5,16 @@ public class Loader
     {
         String text = "Вася заработал 5000 рублей, Петя - 7563 рубля, а Маша - 30000 рублей";
 
-        //Вася и Миша
-        int beginIndex = text.indexOf(" ") + 1;
-        text = text.substring(beginIndex);
-        beginIndex = text.indexOf(' ') + 1;
-        text = text.substring(beginIndex);
-        beginIndex = text.indexOf(' ');
+        text = text.replaceAll("[^0-9,//s]", "");
 
-        int firstNum = Integer.parseInt(text.substring(0, beginIndex));
+        String summStr[] = text.split(",");
 
-        beginIndex = text.lastIndexOf("-") + 2;
-        text = text.substring(beginIndex);
-        beginIndex = text.indexOf(' ');
+        int summ = 0;
+        for (int i = 0; i < summStr.length; i++)
+        {
+            summ += Integer.parseInt(summStr[i]);
+        }
 
-        int secondNum = Integer.parseInt(text.substring(0, beginIndex));
-
-        System.out.println("Вася: " + firstNum);
-
-        System.out.println("Миша: " + secondNum);
+        System.out.println("Сумма: " + summ);
     }
 }
