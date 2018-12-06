@@ -13,12 +13,14 @@ public class Loader
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String inStr = bufferedReader.readLine();
         int num = inStr.indexOf(' ');
+        if (num < 0) return;
         String family = inStr.substring(0, num);
-        String stmp = inStr.substring(num + 1);
-        num = stmp.indexOf(' ');
-        String name = stmp.substring(0, num);
-        String stmp2 = stmp.substring(num + 1);
-        System.out.println("Фамилия: " + family + "\nИмя: " + name + "\nОтчество: " + stmp2);
+        inStr = inStr.substring(num + 1);
+        num = inStr.indexOf(' ');
+        if (num < 0) return;
+        String name = inStr.substring(0, num);
+        inStr = inStr.substring(num + 1);
+        System.out.println("Фамилия: " + family + "\nИмя: " + name + "\nОтчество: " + inStr);
 
     }
 }
