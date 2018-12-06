@@ -7,18 +7,18 @@ public class Loader
 
         //Вася и Миша
         int beginIndex = text.indexOf(" ") + 1;
-        String text2 = text.substring(beginIndex);
-        beginIndex = text2.indexOf(" ") + 1;
-        String text3 = text2.substring(beginIndex);
-        beginIndex = text3.indexOf(" ");
+        text = text.substring(beginIndex);
+        beginIndex = text.indexOf(' ') + 1;
+        text = text.substring(beginIndex);
+        beginIndex = text.indexOf(' ');
 
-        int firstNum = Integer.parseInt(text3.substring(0, beginIndex));
+        int firstNum = Integer.parseInt(text.substring(0, beginIndex));
 
-        beginIndex = text3.lastIndexOf("-") + 2;
-        String text4 = text3.substring(beginIndex);
-        beginIndex = text4.indexOf(" ");
+        beginIndex = text.lastIndexOf("-") + 2;
+        text = text.substring(beginIndex);
+        beginIndex = text.indexOf(' ');
 
-        int secondNum = Integer.parseInt(text4.substring(0, beginIndex));
+        int secondNum = Integer.parseInt(text.substring(0, beginIndex));
 
         System.out.println("Вася: " + firstNum);
 
