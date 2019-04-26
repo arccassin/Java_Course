@@ -5,7 +5,8 @@
 # IntelliJ project files
 /.idea
 *.iml
-/META-INF/
-/production/
+
+out/META-INF
+out/production
 
 gen
