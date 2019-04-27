@@ -6,6 +6,42 @@ public class Car
     private Integer height;
     private Double weight;
     private Boolean hasVehicle;
+
+    public void setNumber(String number)
+    {
+        this.number = number;
+    }
+
+    public void setHeight(Integer height)
+    {
+        this.height = height;
+    }
+
+    public void setWeight(Double weight)
+    {
+        this.weight = weight;
+    }
+
+    public Boolean getHasVehicle()
+    {
+        return hasVehicle;
+    }
+
+    public void setHasVehicle(Boolean hasVehicle)
+    {
+        this.hasVehicle = hasVehicle;
+    }
+
+    public Boolean getSpecial()
+    {
+        return isSpecial;
+    }
+
+    public void setSpecial(Boolean special)
+    {
+        isSpecial = special;
+    }
+
     private Boolean isSpecial;
 
     public Car(String carNumber, Integer carHeight, Double carWeight, Boolean carHasVehicle)
