@@ -11,7 +11,7 @@ public class Loader
     public static void main(String[] args) throws IOException
     {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        String inStr = bufferedReader.readLine();
+        String inStr = bufferedReader.readLine().trim();
         int num = inStr.indexOf(' ');
         if (num < 0) return;
         String family = inStr.substring(0, num);
