@@ -12,15 +12,12 @@ public class Loader
     {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String inStr = bufferedReader.readLine();
-        int num = inStr.indexOf(' ');
-        if (num < 0) return;
-        String family = inStr.substring(0, num);
-        inStr = inStr.substring(num + 1);
-        num = inStr.indexOf(' ');
-        if (num < 0) return;
-        String name = inStr.substring(0, num);
-        inStr = inStr.substring(num + 1);
-        System.out.println("Фамилия: " + family + "\nИмя: " + name + "\nОтчество: " + inStr);
 
+        String[] strings = inStr.split("\\s+", 3);
+
+        String family = strings[0];
+        String name = strings[1];
+        String lastname = strings[2];
+        System.out.println("Фамилия: " + family + "\nИмя: " + name + "\nОтчество: " + lastname);
     }
 }
