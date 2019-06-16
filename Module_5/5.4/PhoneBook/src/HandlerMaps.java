@@ -5,14 +5,14 @@ import java.util.TreeMap;
 /**
  * Created by User on 10 Июнь, 2019
  */
-class HandlerHashSet
+class HandlerMaps
 {
     private static final String COMMAND_LIST = "LIST";
 
     private HashMap<String, String> hashMapKeyPhone;
     private TreeMap<String, String> treeMapKeyName;
 
-    HandlerHashSet()
+    HandlerMaps()
     {
 
         hashMapKeyPhone = new HashMap<String, String>();

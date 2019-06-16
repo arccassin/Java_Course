@@ -12,14 +12,14 @@ public class Loader
         ArrayList<String> todoList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         String input;
-        HandlerHashSet handlerHashSet = new HandlerHashSet();
-
+        HandlerMaps handlerMaps = new HandlerMaps();
+        HandlerOneMap handlerOneMaplerMaps = new HandlerOneMap();
         do
         {
             input = scanner.nextLine();
 
-            handlerHashSet.scannerCommand(input);
-
+//            handlerMaps.scannerCommand(input);
+            handlerOneMaplerMaps.scannerCommand((input));
         }
         while (input.compareTo("exit") != 0);
     }
