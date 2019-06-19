@@ -64,13 +64,13 @@ public class Loader
         do
         {
             input = scanner.nextLine();
-            Collections.sort(numbers);
             String sMess = "Прямой перебор";
             start = System.nanoTime();
             System.out.println(numbers.contains(input));
             System.out.println(sMess + " = " + (System.nanoTime() - start));
 
             sMess = "Бинарный поиск";
+            Collections.sort(numbers);
             start = System.nanoTime();
             System.out.println(Collections.binarySearch(numbers, input));
             System.out.println(sMess + " = " + (System.nanoTime() - start));
