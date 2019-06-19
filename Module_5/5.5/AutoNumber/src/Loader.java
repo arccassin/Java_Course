@@ -10,7 +10,7 @@ public class Loader
     {
 
         //A333AA197
-        String[] symbList = {"А", "В", "Е", "К", "М", "Н", "О", "Р", "С", "Т", "У", "Х"};
+        String[] symbList = {"Х", "Е", "К", "Р", "С", "У", "А", "Н", "О", "М", "Т", "В"};
         ArrayList<String> numbers = new ArrayList<>();
 
         long start = System.currentTimeMillis();
@@ -22,32 +22,28 @@ public class Loader
                 {
                     for (String symb2 : symbList)
                     {
+                        StringBuilder stringBuilder = new StringBuilder();
+                        stringBuilder.append(symb1);
+                        if (j < 10)
+                        {
+                            stringBuilder.append("00" + j);
+                        } else if (j > 9 && j < 100)//&& (j % 11 != 0))
+                        {
+                            stringBuilder.append((j % 10) + String.valueOf(j));
+                        } else if (j % 10 == j / 100 || j % 100 == 0)
+                        {
+                            stringBuilder.append(j);
+                        } else continue;
 
+                        stringBuilder.append(symb2);
+                        stringBuilder.append(symb1);
 
-
-
-                            StringBuilder stringBuilder = new StringBuilder();
-                            stringBuilder.append(symb1);
-                            if (j < 10)
-                            {
-                                stringBuilder.append("00" + j);
-                            } else if (j > 9 && j < 100)//&& (j % 11 != 0))
-                            {
-                                stringBuilder.append((j % 10) + String.valueOf(j));
-                            } else if (j % 10 == j / 100 || j % 100 == 0)
-                            {
-                                stringBuilder.append(j);
-                            } else continue;
-
-                            stringBuilder.append(symb2);
-                            stringBuilder.append(symb1);
-
-                            if (i < 10)
-                            {
-                                stringBuilder.append("0");
-                            }
-                            stringBuilder.append(i);
-                            numbers.add(stringBuilder.toString());
+                        if (i < 10)
+                        {
+                            stringBuilder.append("0");
+                        }
+                        stringBuilder.append(i);
+                        numbers.add(stringBuilder.toString());
 
                     }
                 }
@@ -68,25 +64,26 @@ public class Loader
         do
         {
             input = scanner.nextLine();
+            Collections.sort(numbers);
             String sMess = "Прямой перебор";
-            start = System.currentTimeMillis();
+            start = System.nanoTime();
             System.out.println(numbers.contains(input));
-            System.out.println(sMess + " = " + (System.currentTimeMillis() - start));
+            System.out.println(sMess + " = " + (System.nanoTime() - start));
 
             sMess = "Бинарный поиск";
-            start = System.currentTimeMillis();
+            start = System.nanoTime();
             System.out.println(Collections.binarySearch(numbers, input));
-            System.out.println(sMess + " = " + (System.currentTimeMillis() - start));
+            System.out.println(sMess + " = " + (System.nanoTime() - start));
 
             sMess = "HashSet";
-            start = System.currentTimeMillis();
+            start = System.nanoTime();
             System.out.println(hashSet.contains(input));
-            System.out.println(sMess + " = " + (System.currentTimeMillis() - start));
+            System.out.println(sMess + " = " + (System.nanoTime() - start));
 
             sMess = "TreeSet";
-            start = System.currentTimeMillis();
+            start = System.nanoTime();
             System.out.println(treeSet.contains(input));
-            System.out.println(sMess + " = " + (System.currentTimeMillis() - start));
+            System.out.println(sMess + " = " + (System.nanoTime() - start));
         }
         while (input.compareTo("exit") != 0);
     }
