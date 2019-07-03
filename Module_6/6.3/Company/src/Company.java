@@ -1,4 +1,5 @@
 import Employees.Employee;
+import Employees.ParentEmployee;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,6 +13,7 @@ public class Company
     private int preliminaryTop;
     private int incomeCompany;
     private int emloyeeCount;
+    private ArrayList<ParentEmployee> personalList = new ArrayList<ParentEmployee>();
 
     public Company(int fixedSalary, int preliminaryTop, int incomeCompany, int emloyeeCount)
     {
@@ -31,7 +33,6 @@ public class Company
         return preliminaryTop;
     }
 
-
     public int getIncomeCompany()
     {
         return incomeCompany;
@@ -42,17 +43,17 @@ public class Company
         return fixedSalary;
     }
 
-    private ArrayList<Employee> personalList = new ArrayList<Employee>();
-
-
-    public ArrayList<Employee> getTopSalaryStaff(int count){
-        if (count == 0 || count > personalList.size()){
+    public ArrayList<Employee> getTopSalaryStaff(int count)
+    {
+        if (count == 0 || count > personalList.size())
+        {
             return null;
         }
 
         ArrayList<Employee> currentList = new ArrayList<>();
-        Collections.sort(personalList, new EmployeeComparator());
-        for (int i = personalList.size() - 1; i > personalList.size() - 1 - count  ; i--)
+//        Collections.sort(personalList, new EmployeeComparator());
+        Collections.sort(personalList);
+        for (int i = personalList.size() - 1; i > personalList.size() - 1 - count; i--)
         {
             currentList.add(personalList.get(i));
         }
@@ -60,13 +61,16 @@ public class Company
         return currentList;
     }
 
-    public ArrayList<Employee> getLowestSalaryStaff(int count){
-        if (count == 0 || count > personalList.size()){
+    public ArrayList<Employee> getLowestSalaryStaff(int count)
+    {
+        if (count == 0 || count > personalList.size())
+        {
             return null;
         }
 
         ArrayList<Employee> currentList = new ArrayList<>();
-        Collections.sort(personalList, new EmployeeComparator());
+//        Collections.sort(personalList, new EmployeeComparator());
+        Collections.sort(personalList);
         for (int i = 0; i < personalList.size(); i++)
         {
             currentList.add(personalList.get(i));
@@ -75,11 +79,13 @@ public class Company
         return currentList;
     }
 
-    public void hiringEmployee(Employee employee){
+    public void hiringEmployee(ParentEmployee employee)
+    {
         personalList.add(employee);
     }
 
-    public void firingEmployee(Employee employee){
+    public void firingEmployee(Employee employee)
+    {
         personalList.remove(employee);
     }
 
