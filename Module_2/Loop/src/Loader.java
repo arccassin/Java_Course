@@ -15,7 +15,7 @@ public class Loader
         System.out.println("Ticket numbers of for loop ==========================================");
         for (int I = 200000; I <= 235000; I++)
         {
-            if (((I >= 200000) && (I<=210000)) || ((I >= 220000) && (I<=235000)))
+            if ((I<=210000) || (I >= 220000))
             {
                 System.out.println("Ticket number " + I);
             }
@@ -25,7 +25,7 @@ public class Loader
         Integer I = 200000;
         do
         {
-            if (((I >= 200000) && (I<=210000)) || ((I >= 220000) && (I<=235000)))
+            if ((I<=210000) || (I >= 220000))
             {
                 System.out.println("Ticket number " + I);
             }
