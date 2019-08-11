@@ -1,8 +1,9 @@
-import core.*;
 import core.Camera;
+import core.Car;
+import core.Police;
+import core.WeightMeter;
 
-public class RoadController
-{
+public class RoadController {
     public static Double passengerCarMaxWeight = 3500.0; // kg
     public static Integer passengerCarMaxHeight = 2000; // mm
     public static Integer controllerMaxHeight = 3500; // mm
@@ -16,11 +17,9 @@ public class RoadController
     public static Integer finePerGrade = 500; // RUB
     public static Integer criminalSpeed = 160; // km/h
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //Integer i
-        for(Integer i = 0; i < 10; i++)
-        {
+        for (Integer i = 0; i < 10; i++) {
             //Car car
             Car car = Camera.getNextCar();
             System.out.println(car);
@@ -33,24 +32,23 @@ public class RoadController
             //Boolean policeCalled
             Boolean policeCalled = false;
             //String criminalNumber
-            for(String criminalNumber : Police.getCriminalNumbers())
-            {
+            for (String criminalNumber : Police.getCriminalNumbers()) {
                 //String carNumber
                 String carNumber = car.getNumber();
-                if(carNumber.equals(criminalNumber)) {
+                if (carNumber.equals(criminalNumber)) {
                     Police.call("автомобиль нарушителя с номером " + carNumber);
                     blockWay("не двигайтесь с места! За вами уже выехали!");
                     break;
                 }
             }
-            if(Police.wasCalled()) {
+            if (Police.wasCalled()) {
                 continue;
             }
 
             /**
              * Пропускаем автомобили спецтранспорта
              */
-            if(car.isSpecial()) {
+            if (car.isSpecial()) {
                 openWay();
                 continue;
             }
@@ -62,30 +60,27 @@ public class RoadController
             Integer carHeight = car.getHeight();
             //Integer price
             Integer price = 0;
-            if(carHeight > controllerMaxHeight)
-            {
+            if (carHeight > controllerMaxHeight) {
                 blockWay("высота вашего ТС превышает высоту пропускного пункта!");
                 continue;
-            }
-            else if(carHeight > passengerCarMaxHeight)
-            {
+            } else if (carHeight > passengerCarMaxHeight) {
                 //Double weight
                 Double weight = WeightMeter.getWeight(car);
                 //Грузовой автомобиль
-                if(weight > passengerCarMaxWeight) {
+                if (weight > passengerCarMaxWeight) {
                     price = cargoCarPrice;
                 }
                 //Легковой автомобиль
                 else {
                     price = passengerCarPrice;
                 }
-                //на прицеп проверяем обоих
-                if(car.hasVehicle()) {
-                    price = price + vehicleAdditionalPrice;
-                }
-            }
-            else {
+            } else {
                 price = passengerCarPrice;
+            }
+
+            //на прицеп проверяем обоих
+            if (car.hasVehicle()) {
+                price = price + vehicleAdditionalPrice;
             }
 
             /**
@@ -93,14 +88,11 @@ public class RoadController
              */
             //Integer carSpeed
             Integer carSpeed = Camera.getCarSpeed(car);
-            if(carSpeed > criminalSpeed)
-            {
+            if (carSpeed > criminalSpeed) {
                 Police.call("cкорость автомобиля - " + carSpeed + " км/ч, номер - " + car.getNumber());
                 blockWay("вы значительно превысили скорость. Ожидайте полицию!");
                 continue;
-            }
-            else if(carSpeed > maxOncomingSpeed)
-            {
+            } else if (carSpeed > maxOncomingSpeed) {
                 //Integer overSpeed
                 Integer overSpeed = carSpeed - maxOncomingSpeed;
                 // Integer totalFine
@@ -120,13 +112,11 @@ public class RoadController
     /**
      * Открытие шлагбаума
      */
-    public static void openWay()
-    {
+    public static void openWay() {
         System.out.println("Шлагбаум открывается... Счастливого пути!");
     }
 
-    public static void blockWay(String reason)
-    {
+    public static void blockWay(String reason) {
         System.out.println("Проезд невозможен: " + reason);
     }
 }
