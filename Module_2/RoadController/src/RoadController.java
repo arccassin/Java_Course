@@ -72,16 +72,16 @@ public class RoadController
                 //Double weight
                 Double weight = WeightMeter.getWeight(car);
                 //Грузовой автомобиль
-                if(weight > passengerCarMaxWeight)
-                {
+                if(weight > passengerCarMaxWeight) {
                     price = cargoCarPrice;
-                    if(car.hasVehicle()) {
-                        price = price + vehicleAdditionalPrice;
-                    }
                 }
                 //Легковой автомобиль
                 else {
                     price = passengerCarPrice;
+                }
+                //на прицеп проверяем обоих
+                if(car.hasVehicle()) {
+                    price = price + vehicleAdditionalPrice;
                 }
             }
             else {
