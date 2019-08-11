@@ -13,24 +13,24 @@ public class Loader
     {
 
         System.out.println("Ticket numbers of for loop ==========================================");
-        for (int I = 200000; I <= 235000; I++)
+        for (int i = 200000; i <= 235000; i++)
         {
-            if ((I<=210000) || (I >= 220000))
+            if ((i<=210000) || (i >= 220000))
             {
-                System.out.println("Ticket number " + I);
+                System.out.println("Ticket number " + i);
             }
         }
 
         System.out.println("Ticket numbers of while loop ==========================================");
-        Integer I = 200000;
+        int i = 200000;
         do
         {
-            if ((I<=210000) || (I >= 220000))
+            if ((i<=210000) || (i >= 220000))
             {
-                System.out.println("Ticket number " + I);
+                System.out.println("Ticket number " + i);
             }
-            I++;
-        }while (I <= 235000);
+            i++;
+        }while (i <= 235000);
 
     }
 }
