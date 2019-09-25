@@ -28,6 +28,9 @@ public class Cat
     {
         this();
         this.weight = weight;
+        if(isDead()){
+            Cat.count--;
+        }
     }
 
     public Cat()
