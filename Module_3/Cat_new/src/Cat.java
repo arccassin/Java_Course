@@ -12,8 +12,34 @@ public class Cat
     private String name;
     private CatColor color;
 
+    public Cat(String name, double weight)
+    {
+        this(name);
+        this.weight = weight;
+    }
+
+    public Cat(String name)
+    {
+        this();
+        this.name = name;
+    }
+
+    public Cat(double weight)
+    {
+        this();
+        this.weight = weight;
+    }
+
+    public Cat()
+    {
+        weight = 1500.0 + 3000.0 * Math.random();
+        originWeight = weight;
+        Cat.count++;
+    }
     public Cat getClone()
     {
+        if (isDead())
+            return null;
         var targetCat = new Cat(name, weight);
         targetCat.color = color;
         targetCat.eatenFood = eatenFood;
@@ -44,31 +70,6 @@ public class Cat
     public double getEatenFood()
     {
         return eatenFood;
-    }
-
-    public Cat(String name, double weight)
-    {
-        this(name);
-        this.weight = weight;
-    }
-
-    public Cat(String name)
-    {
-        this();
-        this.name = name;
-    }
-
-    public Cat(double weight)
-    {
-        this();
-        this.weight = weight;
-    }
-
-    public Cat()
-    {
-        weight = 1500.0 + 3000.0 * Math.random();
-        originWeight = weight;
-        Cat.count++;
     }
 
     public void meow()
@@ -105,8 +106,7 @@ public class Cat
 
     private boolean isDead()
     {
-        boolean b = (weight < MIN_WEIGHT)||(weight > MAX_WEIGHT);
-        return b;
+        return (weight < MIN_WEIGHT)||(weight > MAX_WEIGHT);
     }
 
     private void checkDeadStatus()

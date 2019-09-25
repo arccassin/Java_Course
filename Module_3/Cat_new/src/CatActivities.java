@@ -22,5 +22,10 @@ public class CatActivities
             cat3.meow();
         }
         System.out.println(cat3.getStatus());
-        }
+
+        var catDead = cat3.getClone();
+        if(catDead != null)
+          System.out.println(catDead.getStatus());
+
+    }
 }
