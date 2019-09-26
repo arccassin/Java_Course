@@ -11,6 +11,7 @@ public class Cat
     private double eatenFood;
     private String name;
     private CatColor color;
+    private boolean isDead;
 
     public Cat(String name, double weight)
     {
@@ -28,8 +29,9 @@ public class Cat
     {
         this();
         this.weight = weight;
-        if(isDead()){
+        if ((weight < MIN_WEIGHT)||(weight > MAX_WEIGHT)){
             Cat.count--;
+            isDead = true;
         }
     }
 
@@ -37,12 +39,11 @@ public class Cat
     {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
+        isDead = false;
         Cat.count++;
     }
     public Cat getClone()
     {
-        if (isDead())
-            return null;
         var targetCat = new Cat(name, weight);
         targetCat.color = color;
         targetCat.eatenFood = eatenFood;
@@ -77,27 +78,27 @@ public class Cat
 
     public void meow()
     {
-        if (isDead())
+        if (getIsDead())
             return;
-        weight = weight - 1;
+        weight--;
         checkDeadStatus();
         System.out.println("Meow");
     }
 
     public void feed(Double amount)
     {
-        if (isDead())
+        if (getIsDead())
             return;
-        weight = weight + amount;
+        weight += amount;
         eatenFood += amount;
         checkDeadStatus();
     }
 
     public void drink(Double amount)
     {
-        if (isDead())
+        if (getIsDead())
             return;
-        weight = weight + amount;
+        weight += amount;
         checkDeadStatus();
     }
 
@@ -107,16 +108,16 @@ public class Cat
     }
 
 
-    private boolean isDead()
+    private boolean getIsDead()
     {
-        return (weight < MIN_WEIGHT)||(weight > MAX_WEIGHT);
+        return isDead;
     }
 
     private void checkDeadStatus()
     {
-        if (isDead())
-        {
-            Cat.count -= 1;
+        if ((weight < MIN_WEIGHT)||(weight > MAX_WEIGHT)){
+            isDead = true;
+            Cat.count--;
         }
     }
 
@@ -141,4 +142,6 @@ public class Cat
         weight-=10*Math.random();
         System.out.println("Cat say: I did some shit");
     }
+
+
 }
